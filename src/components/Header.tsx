@@ -18,9 +18,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/95 text-paper backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <a href="#top" className="flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/rehabpt/brand/logo.png"
+            src="https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/e87964f7-acb7-4296-bbae-6721182da0fd/RehabPT+logo.png?format=1500w"
             alt="RehabPT"
             className="h-9 w-auto brightness-0 invert"
           />
