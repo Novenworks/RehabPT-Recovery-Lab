@@ -1,18 +1,26 @@
 import Header from "@/components/Header";
 import { BOOK, EMAIL, LAB_MAPS, PHONE, PHONE_DISPLAY, PT_MAPS } from "@/lib/links";
 
+const SAUNA = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/55f77a59-a2ac-4a8d-835a-9581b2edcc96/Rehabpt+infared+sauna+costa+mesa.png?format=2500w";
+const PLUNGE = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/cb6c8581-dcc3-4a21-a504-70f58b636351/Cold+Plunge+RehabPT+Costa+Mesa.png?format=2500w";
+const HBOT = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/514ff888-333a-4b5c-ae81-67e76cb55554/RehabPT+Hyperbaric+Chamber+Newport+Beach+Costa+Mesa.png?format=2500w";
+const SHOCK = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/b082d229-574b-4795-99e8-2b0048ad5397/RehabPT+shockwave+therapy.png?format=2500w";
+const NORM = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/bec56592-991e-464b-81d5-07aac363da6b/Normatec_3_Legs_5.jpg?format=2500w";
+const RED = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/76c99523-fc81-460d-98ae-9dd5d85b265f/Red+Light+Therapy+Newport+Beach+RehabPT.png?format=2500w";
+const PT = "https://images.squarespace-cdn.com/content/v1/686c4403e336af50242db6b0/09908496-882b-47b4-9ba9-98ffa68fef24/Physical+Therapy.jpg?format=2500w";
+
 const STACK = [
   { group: "Reset", items: [
-    { name: "Infrared Sauna", img: "/assets/rehabpt/sauna/sauna.png", alt: "Infrared sauna cabin at RehabPT Recovery Lab", copy: "A quiet heat session you can pair with training or a long workday." },
-    { name: "Cold Plunge", img: "/assets/rehabpt/cold-plunge/cold-plunge.png", alt: "Cold plunge tub at RehabPT Recovery Lab in Costa Mesa", copy: "Short, structured cold exposure in the Recovery Lab." },
+    { name: "Infrared Sauna", img: SAUNA, alt: "Infrared sauna cabin at RehabPT Recovery Lab", copy: "A quiet heat session you can pair with training or a long workday." },
+    { name: "Cold Plunge", img: PLUNGE, alt: "Cold plunge tub at RehabPT Recovery Lab in Costa Mesa", copy: "Short, structured cold exposure in the Recovery Lab." },
   ]},
   { group: "Restore", items: [
-    { name: "Normatec Compression", img: "/assets/rehabpt/compression/normatec.jpg", alt: "Normatec compression boots", copy: "Dynamic compression for legs after training or long standing days." },
-    { name: "Red Light Therapy", img: "/assets/rehabpt/red-light/red-light.png", alt: "Red light therapy panel at RehabPT", copy: "A standalone session in the lab, booked on its own or stacked." },
+    { name: "Normatec Compression", img: NORM, alt: "Normatec compression boots", copy: "Dynamic compression for legs after training or long standing days." },
+    { name: "Red Light Therapy", img: RED, alt: "Red light therapy panel at RehabPT", copy: "A standalone session in the lab, booked on its own or stacked." },
   ]},
   { group: "Advanced", items: [
-    { name: "Hyperbaric Oxygen Chamber", img: "/assets/rehabpt/hbot/hbot.png", alt: "Hyperbaric oxygen chamber at RehabPT Recovery Lab", copy: "Scheduled HBOT sessions inside the Costa Mesa Recovery Lab." },
-    { name: "Shockwave Therapy", img: "/assets/rehabpt/shockwave/shockwave.png", alt: "Shockwave therapy device used at RehabPT", copy: "A targeted modality offered through RehabPT — book to confirm fit." },
+    { name: "Hyperbaric Oxygen Chamber", img: HBOT, alt: "Hyperbaric oxygen chamber at RehabPT Recovery Lab", copy: "Scheduled HBOT sessions inside the Costa Mesa Recovery Lab." },
+    { name: "Shockwave Therapy", img: SHOCK, alt: "Shockwave therapy device used at RehabPT", copy: "A targeted modality offered through RehabPT — book to confirm fit." },
   ]},
 ];
 
@@ -26,7 +34,7 @@ export default function HomePage() {
       </a>
       <Header />
       <section className="relative min-h-[88vh] overflow-hidden bg-ink text-paper">
-        <img src="/assets/rehabpt/sauna/sauna.png" alt="Infrared sauna at RehabPT Recovery Lab, Costa Mesa" className="absolute inset-0 h-full w-full object-cover opacity-45" />
+        <img src={SAUNA} alt="Infrared sauna at RehabPT Recovery Lab, Costa Mesa" className="absolute inset-0 h-full w-full object-cover opacity-45" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:px-6">
           <p className="font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-[0.28em] text-teal">Physical therapy + recovery · Costa Mesa</p>
@@ -45,7 +53,7 @@ export default function HomePage() {
           <h2 className="mt-3 max-w-3xl font-[family-name:var(--font-display)] text-4xl font-bold uppercase leading-none md:text-6xl">From rehab to recovery, without changing teams.</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <article className="overflow-hidden bg-ink text-paper">
-              <img src="/assets/rehabpt/pt/physical-therapy.jpg" alt="Physical therapy treatment table at RehabPT" className="h-56 w-full object-cover" />
+              <img src={PT} alt="Physical therapy treatment table at RehabPT" className="h-56 w-full object-cover" />
               <div className="p-7">
                 <h3 className="font-[family-name:var(--font-display)] text-3xl font-bold uppercase">Physical Therapy</h3>
                 <p className="mt-3 text-sand">Personalized rehab and movement work at 1810 Newport Blvd, inside OC Performance Center.</p>
@@ -53,7 +61,7 @@ export default function HomePage() {
               </div>
             </article>
             <article className="overflow-hidden bg-ink text-paper">
-              <img src="/assets/rehabpt/cold-plunge/cold-plunge.png" alt="Recovery Lab cold plunge" className="h-56 w-full object-cover" />
+              <img src={PLUNGE} alt="Recovery Lab cold plunge" className="h-56 w-full object-cover" />
               <div className="p-7">
                 <h3 className="font-[family-name:var(--font-display)] text-3xl font-bold uppercase">Recovery Lab</h3>
                 <p className="mt-3 text-sand">Sauna, cold plunge, HBOT, compression, red light and more at 419 E 17th St #101 — next to Art of Jiu Jitsu.</p>
@@ -90,11 +98,11 @@ export default function HomePage() {
       </section>
       <section id="contrast" className="grid md:grid-cols-2">
         <div className="relative min-h-[420px] bg-heat">
-          <img src="/assets/rehabpt/sauna/sauna.png" alt="Infrared sauna interior" className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-luminosity" />
+          <img src={SAUNA} alt="Infrared sauna interior" className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-heat/40" />
         </div>
         <div className="relative min-h-[420px] bg-cold">
-          <img src="/assets/rehabpt/cold-plunge/cold-plunge.png" alt="Cold plunge" className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-luminosity" />
+          <img src={PLUNGE} alt="Cold plunge" className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-luminosity" />
           <div className="absolute inset-0 bg-cold/40" />
         </div>
         <div className="bg-ink px-6 py-14 text-paper md:col-span-2">
@@ -107,7 +115,7 @@ export default function HomePage() {
       </section>
       <section id="clinical" className="bg-paper py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
-          <img src="/assets/rehabpt/shockwave/shockwave.png" alt="Clinical treatment tools at RehabPT" className="h-[420px] w-full object-cover" />
+          <img src={SHOCK} alt="Clinical treatment tools at RehabPT" className="h-[420px] w-full object-cover" />
           <div>
             <p className="font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.25em] text-teal-deep">Clinical credibility</p>
             <h2 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold uppercase leading-none md:text-5xl">Recovery backed by people who understand rehab.</h2>
