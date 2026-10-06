@@ -74,7 +74,7 @@ export default function HomePage() {
       <section id="stack" className="bg-sand py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <h2 className="font-[family-name:var(--font-display)] text-4xl font-bold uppercase md:text-5xl">Recovery Lab stack</h2>
-          <p className="mt-3 max-w-2xl text-ink/80">Organized by how people actually use the room — not by marketing claims.</p>
+          <p className="mt-3 max-w-2xl text-ink/80">Organized by how people use the room.</p>
           <div className="mt-12 space-y-12">
             {STACK.map((group) => (
               <div key={group.group}>
@@ -160,7 +160,8 @@ export default function HomePage() {
             </article>
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href={`sms:${PHONE}`} className="bg-ink px-5 py-3 text-sm font-bold uppercase text-paper">Call / text {PHONE_DISPLAY}</a>
+            <a href={`tel:${PHONE}`} className="bg-ink px-5 py-3 text-sm font-bold uppercase text-paper">Call {PHONE_DISPLAY}</a>
+            <a href={`sms:${PHONE}`} className="border border-ink px-5 py-3 text-sm font-bold uppercase">Text</a>
             <a href={BOOK} className="bg-teal px-5 py-3 text-sm font-bold uppercase text-ink">Book services</a>
             <a href={`mailto:${EMAIL}`} className="border border-ink px-5 py-3 text-sm font-bold uppercase">{EMAIL}</a>
           </div>
@@ -170,7 +171,7 @@ export default function HomePage() {
       <footer className="bg-ink py-10 text-sand">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-sm md:flex-row md:items-center md:justify-between md:px-6">
           <p>RehabPT Recovery Lab · Costa Mesa</p>
-          <p>Speculative redesign by Novenworks</p>
+          <p>Speculative homepage concept by Novenworks. Not affiliated with or endorsed by RehabPT.</p>
         </div>
       </footer>
     </div>
