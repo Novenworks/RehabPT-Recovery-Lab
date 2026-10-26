@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "RehabPT Recovery Lab | Costa Mesa Physical Therapy + Recovery",
   description:
     "Physical therapy and advanced recovery services in Costa Mesa. Sauna, cold plunge, HBOT, compression, red light, and shockwave — backed by a real PT practice.",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
